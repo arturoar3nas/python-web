@@ -93,27 +93,31 @@ if($_SESSION["k_username"] != "admin")
 			<!-- Panel 1 -->
 			<h4><a>Flags</a></h4>
 			<!-- Rounded switch -->
-			<label for="FWifi">Wifi</label>
+			<label for="fWifi">Wifi</label>
 			<label class="switch">
-			  OFF
-			  <input type="hidden" name="add" value="0">
-			  <input type="checkbox" name="add" value=1>
+
+			  <input type="hidden" name="fWifi" value="0" id="fWifi">
+			  <input type="checkbox" value="1" name="fWifi" id="fWifi">
 			  <span class="slider round"></span>
-			  ON
+
 			</label>
-			<label for="F3G">3G</label>
+
+			<label for="f3G">3G</label>
 			<label class="switch">
-			  OFF
-			  <input type="checkbox" value=1>
+
+			  <input type="hidden" name="f3G" value="0" id="f3G">
+			  <input type="checkbox" value="1" name="f3G" id="f3G">
 			  <span class="slider round"></span>
-			  ON
+
 			</label>
-			<label for="FBluethoot">Bluethoot</label>
+
+			<label for="fBt">Bluethoot</label>
 			<label class="switch">
-			  OFF
-			  <input type="checkbox" value=1>
+
+			  <input type="hidden" name="fBt" value="0" id="fBt">
+			  <input type="checkbox" value="1" name="fBt" id="fBt">
 			  <span class="slider round"></span>
-			  ON
+
 			</label>
 					
 			<!--FIN panel 1-->
@@ -159,26 +163,21 @@ if($_SESSION["k_username"] != "admin")
 	            <input type="text" class="form-control" name="wifi_ssid" id="wifi_ssid" required />
 	          </div>  
 	          <div class="col">
-	            <label for="wifi_user">Usuario</label>
-	            <input type="text" class="form-control" name="wifi_user" id="wifi_user" required />
-	          </div>  
-	          <div class="col">
 	            <label for="wifi_password">Contrase&ntilde;a</label>
 	            <input type="text" class="form-control" name="wifi_password" id="wifi_password" required />
 	          </div> 
 	        </div>   
 			<!--FIN panel 3-->
 				<hr><h4><a>Otras Configuraciones</a></h4>
-				<label for="FScan">Stop Scan</label>
+				<label for="fScan">Stop Scan</label>
 				<label class="switch">
-				  OFF
-				  <input type="checkbox">
+				  <input type="hidden" name="fScan" value="0" id="fScan">
+				  <input type="checkbox" value="1" name="fScan" id="fScan">
 				  <span class="slider round"></span>
-				  ON
 				</label>
 				<div class="row">
 			          <div class="col">
-						<label for="Scan_Time">Scan Time</label>
+						<label for="">Scan Time</label>
 						<input type="number" min="0" max="999" class="form-control" id="Scan_Time" name ="Scan_Time" required >
 			          </div> 
 			          <div class="col">
@@ -197,25 +196,20 @@ if($_SESSION["k_username"] != "admin")
 		          <div class="col">
 		            <label for="Key">Key</label>
 		            <input type="text" class="form-control" name="Key" id="Key" required />
-		          </div>
-		          	<div class="col">
+		          </div>	          	
+		          <div class="col">
 						<label for="ID">ID</label>
 						<input type="number" min="0" max="999" class="form-control" id="ID" name ="ID" required >
 					</div>	
 					<div class="col">			
 					</div>	  
 		        </div>   
-	     	<hr><br>
+	     		<br><br>
 
 			<div class="form-group">
             <button class="btn btn-success" name="btn-configurar" id="btn-configurar" onclick="guardarForm();">
 				<span class="glyphicon glyphicon-cog"></span> &nbsp; Configurar 
 			</button>
-			<button type="button" class="btn btn-danger" name="btn-reset_rtu" id="btn-reset_rtu" onclick="if(confirm('Va a reiniciar el equipo, esta operaci\u00F3n puede tardar un par de minutos. \u00BFDesea continuar?')){setTimeout ('resetRTU()', 50);} else{return false;}" >
-				<span class="glyphicon glyphicon-off"></span> &nbsp; Reiniciar equipo 
-			</button>
-        	</div>  
-
 
           <!-- Footer -->
           <footer class="sticky-footer">
