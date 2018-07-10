@@ -195,11 +195,11 @@ if($_SESSION["k_username"] != "admin")
 		          </div>  
 		          <div class="col">
 		            <label for="Key">Key</label>
-		            <input type="text" class="form-control" name="Key" id="Key" required />
+		            <input type="text" class="form-control" name="Key" id="Key" required <?php echo $disabled; ?> >
 		          </div>	          	
 		          <div class="col">
 						<label for="ID">ID</label>
-						<input type="number" min="0" max="999" class="form-control" id="ID" name ="ID" required >
+						<input type="number" min="0" max="999" class="form-control" id="ID" name ="ID" required <?php echo $disabled; ?> >
 					</div>	
 					<div class="col">			
 					</div>	  

@@ -9,22 +9,25 @@ if(isset($_POST['btn-login']))
 	
 	try
 	{	
-		$passwordFile = "./password.file";
-		if(!$fp = fopen($passwordFile, 'r'))
-		{
-			echo "No se puede abrir el archivo de claves";
-			exit;
-		}
-		
-		$strings = file_get_contents($passwordFile);
-		$user = strtok($strings, ";");
-		$password = strtok(";");
-		$passwordAdmin = strtok(";");
-		fclose($fp);
+		$passwordFile = "/var/www/html/password.json";
+	    $array = array();
+
+
+	   	//Get data from existing json file
+	   	$jsondata = file_get_contents($passwordFile);
+
+	   	// converts json data into array
+	   	$array = json_decode($jsondata, true);
+
+
+		$user = $array['Admin_User'];
+		$passwordAdmin = $array['Admin_Password'];
+		$regular_user = $array['Regular_User'];
+		$regular_password = $array['Regular_Password'];		
 					
-		if(strcmp($user,$user_ingresado) == 0)
+		if(strcmp($regular_user,$user_ingresado) == 0)
 		{
-			if(strcmp($password,$user_password) == 0)
+			if(strcmp($regular_password,$user_password) == 0)
 			{
 				$_SESSION["k_username"] = $user_ingresado;
 				echo "ok";
@@ -36,7 +39,7 @@ if(isset($_POST['btn-login']))
 		}
 		else 
 		{
-			if(strcmp("admin",$user_ingresado) == 0)
+			if(strcmp($user, $user_ingresado) == 0)
 			{
 				if(strcmp($passwordAdmin,$user_password) == 0)
 				{
@@ -50,7 +53,7 @@ if(isset($_POST['btn-login']))
 			}
 			else
 			{ 	
-				echo "Usuario incorrecto";
+				echo "Usuario incorrecto +  $user +  $user_ingresado  ";
 			}
 		}			
 	}
