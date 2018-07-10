@@ -36,7 +36,7 @@ if(isset($_SESSION['k_username'])!="")
   <!--Login Script-->
   <script type="text/javascript" src="login_c.js"></script>
   <!-- Title-->
-  <title>INNOVARED - Configuraci&oacute;n de InnoRTU</title>
+  <title>Wolke</title>
 </head>
 
 <body class="bg-dark">
@@ -70,7 +70,7 @@ if(isset($_SESSION['k_username'])!="")
                   <img style="width: 130px; align: right" alt="Logo Innovared" src="img/raspberry-pi.png">
                 </div>
                 <div class="col">
-                  <p class="text-right" align="right">Versi&oacute;n 1.0.0.0</p>
+                  <p class="text-right" align="right">Wolke - Versi&oacute;n 1.0.0.3</p>
                 </div>
               </div>
             </form>

@@ -9,7 +9,7 @@ if(isset($_POST['btn-login']))
 	
 	try
 	{	
-		$passwordFile = "/var/www/html/password.json";
+		$passwordFile = "./password.json";
 	    $array = array();
 
 
@@ -23,7 +23,9 @@ if(isset($_POST['btn-login']))
 		$user = $array['Admin_User'];
 		$passwordAdmin = $array['Admin_Password'];
 		$regular_user = $array['Regular_User'];
-		$regular_password = $array['Regular_Password'];		
+		$regular_password = $array['Regular_Password'];
+
+		$_SESSION["k_admin"] = $user;		
 					
 		if(strcmp($regular_user,$user_ingresado) == 0)
 		{
@@ -43,7 +45,7 @@ if(isset($_POST['btn-login']))
 			{
 				if(strcmp($passwordAdmin,$user_password) == 0)
 				{
-					$_SESSION["k_username"] = "admin";
+					$_SESSION["k_username"] = $user_ingresado;
 					echo "ok";
 				}
 				else
@@ -53,7 +55,7 @@ if(isset($_POST['btn-login']))
 			}
 			else
 			{ 	
-				echo "Usuario incorrecto +  $user +  $user_ingresado  ";
+				echo "Usuario incorrecto";
 			}
 		}			
 	}

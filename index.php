@@ -11,7 +11,7 @@ if (!isset($_SESSION['k_username']))
 
 $readonly = "";
 $disabled = "";
-if($_SESSION["k_username"] != "admin")
+if($_SESSION["k_username"] != $_SESSION["k_admin"])
 {
   $readonly = "readonly";
   $disabled = "disabled";
@@ -27,7 +27,7 @@ if($_SESSION["k_username"] != "admin")
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>Setup</title>
+  <title>Wolke - Setup</title>
   <!-- Bootstrap core CSS-->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> 
   <!-- Custom fonts for this template-->
@@ -156,7 +156,7 @@ if($_SESSION["k_username"] != "admin")
 			<!--FIN panel 2-->
 
 			<!-- Panel 3 -->
-			<hr><h4><a>Configutacion Wifi</a></h4>	        
+			<hr><h4><a>Configuracion Wifi</a></h4>	        
 	        <div class="row">
 	          <div class="col">
 	            <label for="wifi_ssid">SSID</label>
@@ -216,7 +216,7 @@ if($_SESSION["k_username"] != "admin")
             <div class="container">        
               <div class="text-center">
                 <img style="width: 30px; align: right" alt="Logo Innovared" src="img/raspberry-pi.png">
-                <small>Copyright © - Versi&oacute;n 1.0.0.0 </small>
+                <small>Wolke - Copyright © - Versi&oacute;n 1.0.0.3 </small>
               </div>
             </div>
           </footer>
