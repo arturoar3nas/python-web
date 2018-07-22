@@ -34,7 +34,7 @@ if($_SESSION["k_username"] != $_SESSION["k_admin"])
         	<br><br>
 			<div class="form-group">
             <button class="btn btn-success" name="btn-configurar" id="btn-configurar" onclick="cargarForm();">
-				<span class="glyphicon glyphicon-cog"></span> &nbsp; Refresh 
+				<span class="glyphicon glyphicon-cog"></span> &nbsp; Actualizar 
 			</button>
 
 			

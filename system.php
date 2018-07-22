@@ -26,11 +26,10 @@ if($_SESSION["k_username"] != $_SESSION["k_admin"])
   <div class="content-wrapper">
     <div class="container-fluid">
       <div class="signin-form">        
-        <form class="form-signin" method="post" id="index-form">
+        <form class="form-signin" method="post" id="system-form">
 			<!-- Panel 1 -->
 			<h4><a>Bluethoot</a></h4>
 			<!-- Rounded switch -->
-			<label for="fBt"></label>
 			<label class="switch">
 			  <input type="hidden" name="fBt" value="0" id="fBt">
 			  <input type="checkbox" value="1" name="fBt" id="fBt">
@@ -38,49 +37,49 @@ if($_SESSION["k_username"] != $_SESSION["k_admin"])
 			</label>					
 			<!--FIN panel 1-->
 			<hr>
-			<h4><a>System Status</a></h4>
+			<h4><a>Estatus del Sistema</a></h4>
 			<div class="row">
 	          <div class="col">
-	            <label for="apn">Active Memory</label>
-	            <input type="text" class="form-control" name="ActiveMemory" id="ActiveMemory"/>
+	            <label for="apn">Memoria Activa (Byte) </label>
+	            <input type="text" class="form-control" name="ActiveMemory" id="ActiveMemory" readonly />
 	          </div>  
 	          <div class="col">
-	            <label for="apn_user">Available Memory</label>
-	            <input type="text" class="form-control" name="AvailableMemory" id="AvailableMemory"  />
+	            <label for="apn_user">Memoria dispobible (Byte) </label>
+	            <input type="text" class="form-control" name="AvailableMemory" id="AvailableMemory"  readonly />
 	          </div>  
 	          <div class="col">
-	            <label for="apn_password">Buffer Memory</label>
-	            <input type="text" class="form-control" name="BufferMemory" id="BufferMemory"  />
+	            <label for="apn_password">Buffer de Memoria (Byte) </label>
+	            <input type="text" class="form-control" name="BufferMemory" id="BufferMemory"  readonly />
 	          </div> 
 	        </div>
 
 	        <div class="row">
 	          <div class="col">
-	            <label for="apn">Cached Memory</label>
-	            <input type="text" class="form-control" name="CachedMemory" id="CachedMemory"  />
+	            <label for="apn">Memoria Cache (Byte) </label>
+	            <input type="text" class="form-control" name="CachedMemory" id="CachedMemory"  readonly />
 	          </div>  
 	          <div class="col">
-	            <label for="apn_user">Free Memory"</label>
-	            <input type="text" class="form-control" name="FreeMemory" id="FreeMemory"/>
+	            <label for="apn_user">Memoria Libre (Byte) </label>
+	            <input type="text" class="form-control" name="FreeMemory" id="FreeMemory" readonly />
 	          </div>  
 	          <div class="col">
-	            <label for="apn_password">Inactive Memory</label>
-	            <input type="text" class="form-control" name="InactiveMemory" id="InactiveMemory"/>
+	            <label for="apn_password">Memoria Inactiva (Byte) </label>
+	            <input type="text" class="form-control" name="InactiveMemory" id="InactiveMemory" readonly />
 	          </div> 
 	        </div>
 
 	        <div class="row">
 	          <div class="col">
-	            <label for="apn">Total Memory</label>
-	            <input type="text" class="form-control" name="TotalMemory" id="TotalMemory"/>
+	            <label for="apn">Memoria Total (Byte) </label>
+	            <input type="text" class="form-control" name="TotalMemory" id="TotalMemory" readonly />
 	          </div>  
 	          <div class="col">
-	            <label for="apn_user">diskfree</label>
-	            <input type="text" class="form-control" name="diskfree" id="diskfree"/>
+	            <label for="apn_user">Almacenamiento Libre (Byte) </label>
+	            <input type="text" class="form-control" name="diskfree" id="diskfree" readonly />
 	          </div>  
 	          <div class="col">
-	            <label for="apn_password">diskused</label>
-	            <input type="text" class="form-control" name="diskused" id="diskused"/>
+	            <label for="apn_password">Almacenamiento Usado (Byte) </label>
+	            <input type="text" class="form-control" name="diskused" id="diskused" readonly />
 	          </div> 
 	        </div>
 
@@ -88,12 +87,12 @@ if($_SESSION["k_username"] != $_SESSION["k_admin"])
 	          <div class="col">
 	          </div>  
 	          <div class="col">
-	            <label for="apn_user">disktotal</label>
-	            <input type="text" class="form-control" name="disktotal" id="disktotal"/>
+	            <label for="apn_user">Almacenamiento Total (Byte) </label>
+	            <input type="text" class="form-control" name="disktotal" id="disktotal" readonly />
 	          </div>  
 	          <div class="col">
-	            <label for="apn_password">Cpu Percent</label>
-	            <input type="text" class="form-control" name="CpuPercent" id="CpuPercent"/>
+	            <label for="apn_password">% de uso de Cpu (Byte) </label>
+	            <input type="text" class="form-control" name="CpuPercent" id="CpuPercent" readonly />
 	          </div> 
 	        </div>
 

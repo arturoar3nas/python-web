@@ -44,7 +44,7 @@ if(isset($_SESSION['k_username'])!="")
     <div class="container">
       <div class="card card-login mx-auto mt-5">
         <div class="card-header">
-          <!-- <img style="width: 130px; align: right" alt="Logo Net-Energy" src="img/logo-innoRTU.png">  Login</div> -->
+          <img style="width: 30px; align: right" alt="Logo Net-Energy" src="img/raspberry-pi.png">  Login</div>
           <div class="card-body">
             <form class="form-signin" method="post" id="login-form">
               <br>
@@ -70,7 +70,7 @@ if(isset($_SESSION['k_username'])!="")
                   <img style="width: 130px; align: right" alt="Logo Innovared" src="img/raspberry-pi.png">
                 </div>
                 <div class="col">
-                  <p class="text-right" align="right">Wolke - Versi&oacute;n 1.0.0.3</p>
+                  <p class="text-right" align="right">Wolke - Versi&oacute;n 1.0.0.5</p>
                 </div>
               </div>
             </form>

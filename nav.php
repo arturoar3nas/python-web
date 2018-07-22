@@ -9,10 +9,10 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Home">
-          <a class="nav-link" href="index.php">
+<!--           <a class="nav-link" href="index.php">
             <i class="fa fa-home"></i>
-            <span class="nav-link-text">Home</span>
-          </a>
+            <span class="nav-link-text">Inicio</span>
+          </a> -->
           <a class="nav-link" href="3g.php">
             <i class="fa fa-signal"></i>
             <span class="nav-link-text">3G</span>
@@ -23,15 +23,15 @@
           </a>
           <a class="nav-link" href="system.php">
             <i class="fa fa-microchip"></i>
-            <span class="nav-link-text">System</span>
+            <span class="nav-link-text">Equipo</span>
           </a>
           <a class="nav-link" href="app.php">
             <i class="fa fa-heartbeat"></i>
-            <span class="nav-link-text">Application</span>
+            <span class="nav-link-text">Applicaci&oacuten</span>
           </a>
           <a class="nav-link" href="camera.php">
             <i class="fa fa-camera"></i>
-            <span class="nav-link-text">Camera</span>
+            <span class="nav-link-text">Camara</span>
           </a>
         </li>
       </ul>
@@ -46,7 +46,7 @@
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
           <a href="php/cerrar_sesion.php" class="nav-link" data-toggle="modal" data-target="#exampleModal">
-            <i class="fa fa-fw fa-sign-out"></i>Logout</a>
+            <i class="fa fa-fw fa-sign-out"></i>Cerrar Sesi&oacuten</a>
         </li>
       </ul>
     </div>

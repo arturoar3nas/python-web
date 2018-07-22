@@ -44,7 +44,7 @@ function guardarForm()
 	// para cambiar el mensaje de validacion
 	$.validator.messages.required = "*Este dato es obligatorio!";
 	
-	$("#index-form").validate({
+	$("#3g-form").validate({
 	   submitHandler: submitForm
        });  
 }

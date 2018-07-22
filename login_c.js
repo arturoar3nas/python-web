@@ -43,7 +43,7 @@ $('document').ready(function()
 					if(response=="ok"){
 									
 						$("#btn-login").html('<img src="img/btn-ajax-loader.gif" /> &nbsp; Redireccionando ...');
-						setTimeout(' window.location.href = "index.php"; ',1000);
+						setTimeout(' window.location.href = "3g.php"; ',1000);
 					}
 					else{
 									

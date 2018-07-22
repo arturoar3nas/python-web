@@ -4,8 +4,8 @@ function cargarForm()
   jQuery("#img").html("");
   jQuery('document').ready(function() {
         jQuery.ajax({            
-              url: "camera_m.php", 
-  	    type: "POST",          
+        url: "camera_m.php", 
+  	    type: "POST",         
   	    dataType: "JSON", 
               success: function( data ) {
                 for (i in data)
@@ -21,13 +21,5 @@ function cargarForm()
   });
 }
 
-function sleep(milliseconds) {
-  var start = new Date().getTime();
-  for (var i = 0; i < 1e7; i++) {
-    if ((new Date().getTime() - start) > milliseconds){
-      break;
-    }
-  }
-}
 
 window.onload = cargarForm;

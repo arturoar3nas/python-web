@@ -26,8 +26,8 @@ if($_SESSION["k_username"] != $_SESSION["k_admin"])
     <div class="container-fluid">
       <div class="signin-form">        
         <form class="form-signin" method="post" id="index-form">
-			
-	     	
+
+
 
 			<?php
     			require_once("footer.php");

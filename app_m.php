@@ -33,7 +33,7 @@ function cargarDatos()
 	{
 		
 		//include "php/gprs-config.php";
-		$myFile = "/home/pi/servicecom/config.json";
+		$myFile = "/home/pi/servicecom/loadcell.json";
 	    $arr_data = array(); // create empty array
 	    $array = array();
 
@@ -44,32 +44,16 @@ function cargarDatos()
 	   	// converts json data into array
 	   	$arr_data = json_decode($jsondata, true);
 
-
-		$array['fWifi']=  $arr_data['Flags']['Wifi'];
-		$array['f3G'] = $arr_data['Flags']['3G'];
-		$array['fBt'] =$arr_data['Flags']['Bluethoot'];
-
-		$array['apn'] = $arr_data['3G']['APN'];
-		$array['apn_user'] = $arr_data['3G']['User'];
-		$array['apn_password'] = $arr_data['3G']['Psw'];
-
-		$array['wifi_ssid'] = $arr_data['Wifi']['SSID'];
-		$array['wifi_password'] = $arr_data['Wifi']['Psw'];
-
-		$array['Aplicacion'] = $arr_data['Aplication'];
-		$array['Scan_Time'] = $arr_data['ScanTime'];
-		$array['fScan'] = $arr_data['StopScan'];
-		$array['ID'] = $arr_data['ID'];
-		$array['Key'] = $arr_data['KEY'];
-		$array['version'] = $arr_data['version'];
-		$array['server'] = $arr_data['server'];
-		$array['fWeight'] = $arr_data['weight'];	
+		$array['tara'] = $arr_data['tara'];
+		$array['Gain'] = $arr_data['Gain'];
+		$array['weight'] = $arr_data['weight'];
+		$array['Calibration_Status'] = $arr_data['Calibration_Status'];	
 
 		// se transforma el arreglo de respuesta en un json
 		echo json_encode($array);
 	}
 	catch (Exception $e) {
-    echo 'Excepción capturada: ',  $e->getMessage(), "\n";
+    echo 'ExcepciÃ³n capturada: ',  $e->getMessage(), "\n";
 	}
 }
 ?>

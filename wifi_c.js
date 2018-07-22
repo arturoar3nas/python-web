@@ -44,7 +44,7 @@ function guardarForm()
 	// para cambiar el mensaje de validacion
 	$.validator.messages.required = "*Este dato es obligatorio!";
 	
-	$("#index-form").validate({
+	$("#wifi-form").validate({
 	   submitHandler: submitForm
        });  
 }
