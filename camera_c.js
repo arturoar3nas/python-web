@@ -10,12 +10,13 @@ function cargarForm()
               success: function( data ) {
                 for (i in data)
                 {
-                  jQuery('#img').append(data[i]);
+                  var res = data[i].replace(/\"/g, "");
+                  jQuery('#img').append(res);
                   break;
                 }		          
               },
               error: function(jqXHR, data ) {        
-  		  alert ('Ajax request Failed.');    
+  		          alert ('Ajax request Failed. ' + JSON.stringify(data)  + ' ' + JSON.stringify(jqXHR) );    
   	    }
           }); 
   });

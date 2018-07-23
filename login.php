@@ -7,7 +7,7 @@ session_start();
 /// si esta iniciada la sesion, redireccionar a la pagina de indice
 if(isset($_SESSION['k_username'])!="")
 {
-  header("Location: index.php");
+  header("Location: 3g.php");
 }
 
 ?>

@@ -27,46 +27,35 @@ else
 {
     //echo 'Funci&oacute;n no existe!';
 }
-
-	$img_dir = "/tmp";
+try
+{
+	$img_dir = "/tmp/";
 
 	$images = scandir($img_dir);
 	$html = array();
 
+	$files = glob('tmp/*'); // get all file names
+	foreach($files as $file){ // iterate files
+	  if(is_file($file))
+	    unlink($file); // delete file
+	}
+
 	foreach($images as $img) 	{ 
-			if($img === '.' || $img === '..') {continue;} 		
+		if($img === '.' || $img === '..') {continue;} 		
 
-				if (  (preg_match('/.jpg/',$img))  ||  (preg_match('/.gif/',$img)) || (preg_match('/.tiff/',$img)) || (preg_match('/.png/',$img)) ) {				
+			if (  (preg_match('/.jpg/',$img))  ||  (preg_match('/.gif/',$img)) || (preg_match('/.tiff/',$img)) || (preg_match('/.png/',$img)) ) {				
 
-				 array_push($html,'<img src="'.$img_dir.$img.'" >');
+				 copy($img_dir.$img, 'tmp/'.$img); // dar permiso en tmp y en img y en /var/www/html/tmp 
+				 //array_push($html,'<img src="'.$img_dir.$img.'" >'); //'<img src="img/'.$img.'" >'
+				 array_push($html,'<img width="450" height="450" src="tmp/'.$img.'" >');
 				 break; 
-				} else { continue; }	
-		}
-	echo json_encode($html);
-
-function cargarDatos()
-{	try 
-	{	
-		$img_dir = "/tmp";
-
-		$images = scandir($img_dir);
-		$html = array();
-
-		foreach($images as $img) 	{ 
-				if($img === '.' || $img === '..') {continue;} 		
-
-					if (  (preg_match('/.jpg/',$img))  ||  (preg_match('/.gif/',$img)) || (preg_match('/.tiff/',$img)) || (preg_match('/.png/',$img)) ) {				
-
-					 array_push($html,'<img src="'.$img_dir.$img.'" >');
-					 break; 
-					} else { continue; }	
-			}
-		echo json_encode($html);
+			} else { continue; }	
 	}
-	catch (Exception $e) {
-    echo 'Excepción capturada: ',  $e->getMessage(), "\n";
-	}
+	echo json_encode($html);	
+} catch(Exception $e) {
+	die(json_encode($e->getMessage()));
 }
+
 ?>
 
 

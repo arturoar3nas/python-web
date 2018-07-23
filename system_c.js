@@ -42,8 +42,10 @@ function cargarForm()
 							var elm = document.getElementById(identificador);
 							elm.click();
 						}
-					}							
-				$($name).attr("value", valor);		
+					}
+				else {							
+					$($name).attr("value", valor);
+				}		
 			});
 		}
 	});

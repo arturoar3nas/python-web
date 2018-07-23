@@ -32,17 +32,15 @@ if($_SESSION["k_username"] != $_SESSION["k_admin"])
 	        </div>
 
         	<br><br>
-			<div class="form-group">
-            <button class="btn btn-success" name="btn-configurar" id="btn-configurar" onclick="cargarForm();">
-				<span class="glyphicon glyphicon-cog"></span> &nbsp; Actualizar 
-			</button>
-
-			
-			<?php
-    			require_once("footer.php");
-    			require_once("scroll.php");
-    			require_once("logout.php");
-			?> 
+    			<div class="form-group">
+                <button class="btn btn-success" name="btn-configurar" id="btn-configurar" onclick="cargarForm();">
+    				<span class="glyphicon glyphicon-cog"></span> &nbsp; Actualizar 
+    			</button>			
+    			<?php
+        			require_once("footer.php");
+        			require_once("scroll.php");
+        			require_once("logout.php");
+    			?> 
         </form>
       </div>
     </div><!-- /.container-fluid-->

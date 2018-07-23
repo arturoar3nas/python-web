@@ -17,13 +17,15 @@ function cargarForm()
 			var instance = 1;
 			$.each(jsonData, function(identificador, valor) {
 				$name = "#"+identificador;
-				if ( identificador == "fWeight"){
+				if ( identificador == "fWeight" || identificador == "fScan"){
 						if(valor == "1"){
 							var elm = document.getElementById(identificador);
 							elm.click();
 						}
-					}							
-				$($name).attr("value", valor);		
+				}					
+				else {							
+					$($name).attr("value", valor);
+				}		
 			});
 		}
 	});

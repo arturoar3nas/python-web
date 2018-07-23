@@ -34,7 +34,7 @@ if($_SESSION["k_username"] != $_SESSION["k_admin"])
 			  <input type="hidden" name="fBt" value="0" id="fBt">
 			  <input type="checkbox" value="1" name="fBt" id="fBt">
 			  <span class="slider round"></span>
-			</label>					
+			</label>				
 			<!--FIN panel 1-->
 			<hr>
 			<h4><a>Estatus del Sistema</a></h4>
