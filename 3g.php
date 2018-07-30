@@ -68,12 +68,44 @@ if($_SESSION["k_username"] != $_SESSION["k_admin"])
 	            <input type="text" class="form-control" name="apn_password" id="apn_password" required />
 	          </div> 
 	        </div>
-	        <br><br>   
-			<!--FIN panel 2-->			
-			<div class="form-group">
-            <button class="btn btn-success" name="btn-configurar" id="btn-configurar" onclick="guardarForm();">
+	        <br><br>
+			<button class="btn btn-success" name="btn-configurar" id="btn-configurar" onclick="guardarForm();">
 				<span class="glyphicon glyphicon-cog"></span> &nbsp; Configurar 
 			</button>
+	        <br><hr>
+			<h4><a>Estado SIM</a></h4>
+			<div class="row">
+	          <div class="col">
+	            <label for="red">Red </label>
+	            <input type="text" class="form-control" name="red" id="red"  readonly />
+	          </div>  
+	          <div class="col">
+	            <label for="signal">Intensidad de la señal </label>
+	            <input type="text" class="form-control" name="signal" id="signal" readonly />
+	          </div>  
+	          <div class="col">
+	            <label for="type">Tipo de Red</label>
+	            <input type="text" class="form-control" name="type" id="type" readonly />
+	          </div> 
+	        </div>
+	        <br><br>
+	        <div class="row">
+	          <div class="col">
+	            <label for="status">Estado del Servicio</label>
+	            <input type="text" class="form-control" name="status" id="status"  readonly />
+	          </div>  
+	          <div class="col">
+	            <label for="roaming">Roaming </label>
+	            <input type="text" class="form-control" name="roaming" id="roaming" readonly />
+	          </div>  
+	          <div class="col">
+	            <label for="imei">IMEI</label>
+	            <input type="text" class="form-control" name="imei" id="imei" readonly />
+	          </div> 
+	        </div>
+	        <br><br>    
+			
+			<!--FIN panel 2-->
 
 			<?php
     			require_once("footer.php");

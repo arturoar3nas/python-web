@@ -59,6 +59,16 @@ if($_SESSION["k_username"] != $_SESSION["k_admin"])
 				<span class="glyphicon glyphicon-cog"></span> &nbsp; Configurar 
 			</button>
 
+			<hr><br>
+			<h4><a>Redes disponibles</a></h4>
+			<button class="btn btn-primary" name="btn-list" id="btn-list" onclick="buildHtmlTable('#excelDataTable')">
+				<span class="glyphicon glyphicon-cog"></span>Scan 
+			</button>
+			<table id="excelDataTable" class="table">
+			<!-- Dinamyc table here! -->
+			</table>
+			
+
 			<?php
     			require_once("footer.php");
     			require_once("scroll.php");
