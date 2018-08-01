@@ -67,6 +67,33 @@ For Edit Password and User change the file password.json
   "Regular_Password": "user",
 }
 ```
+You also need to do the following things
 
-
-
+I use apache2 as an example:
+```sh
+$ cp /lib/systemd/system/apache2.service /etc/systemd/system/
+```
+Now we edit the PrivateTmp=true to PrivateTmp=false:
+```sh
+$ grep PrivateTmp /etc/systemd/system/apache2.service
+PrivateTmp=true
+```
+```sh
+$ nano /etc/systemd/system/apache2.service
+```
+```sh
+$ grep PrivateTmp /etc/systemd/system/apache2.service
+PrivateTmp=false
+```
+And at the end, restart the apache2 process:
+```sh
+$ systemctl restart apache2.service
+```
+and 
+```sh
+sudo visudo
+```
+And copy in the last line
+```sh
+www-data ALL=NOPASSWD: ALL
+```
