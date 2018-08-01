@@ -5,12 +5,12 @@ function cargarDatos()
 	{
 		
 		$command = escapeshellcmd('sudo python3 /home/pi/servicecom/scanwifi.py');
-		$output = shell_exec($command);
+		$output = shell_exec($command); //shell_exec
+		sleep(4);
 
-		//include "php/gprs-config.php";
+		// do your processing
 		$myFile = "/home/pi/servicecom/networks.json";
 	    $array = array();
-
 
 	   	//Get data from existing json file
 	   	$jsondata = file_get_contents($myFile);
@@ -21,9 +21,12 @@ function cargarDatos()
 		// se transforma el arreglo de respuesta en un json
 		echo json_encode($array);
 		// echo $jsondata;
+
+		echo null;
+
 	}
 	catch (Exception $e) {
-    echo 'Excepción capturada: ',  $e->getMessage(), "\n";
+    echo '';
 	}
 }
 ?>

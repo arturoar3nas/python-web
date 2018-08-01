@@ -63,7 +63,8 @@ function cargarDatos()
 		$array['Key'] = $arr_data['KEY'];
 		$array['version'] = $arr_data['version'];
 		$array['server'] = $arr_data['server'];
-		$array['fWeight'] = $arr_data['weight'];	
+		$array['fWeight'] = $arr_data['weight'];
+		$array['Pnumber'] = $arr_data['StatusApp'];	
 
 		// se transforma el arreglo de respuesta en un json
 		echo json_encode($array);

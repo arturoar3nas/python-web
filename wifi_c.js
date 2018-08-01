@@ -260,12 +260,18 @@ function buildHtmlTable(selector) {
 		url: "wifi_list_m.php", 
 		type: "POST",
 		data: "call=cargarDatos",
-		dataType: "json",  
+		dataType: "json",
+		beforeSend: function()
+			{	
+				$("#error").fadeOut();
+				/*Animamos el boton*/
+				$("#btn-list").html('<span class="glyphicon glyphicon-transfer"></span> &nbsp; Escaneando...');
+			},  
 		error: function(error) { alert(JSON.stringify(error)) ;
 					$("#error").fadeIn(1000, 
 							function(){						
 								$("#error").html('<div class="alert alert-danger"> <span class="glyphicon glyphicon-info-sign"></span> &nbsp; '+error.responseText+' !</div>');
-								$("#btn-login").html('<span class="glyphicon glyphicon-log-in"></span> &nbsp; Sign In');
+								$("#btn-list").html('<span class="glyphicon glyphicon-log-in"></span> &nbsp; Scan');
 							});
 			   },
 		success: function(jsonData){
@@ -279,21 +285,11 @@ function buildHtmlTable(selector) {
 			      row$.append($('<td/>').html(cellValue));
 			    }
 			    $(selector).append(row$);
-			  }			
+			  }
+			  $("#btn-list").html('<span class="glyphicon glyphicon-cog"></span> &nbsp; Scan');				
+			  alertify.success("Escaneo exitoso!");			
 		}
 	}); 
-
-  // var columns = addAllColumnHeaders(myList, selector);
-
-  // for (var i = 0; i < myList.length; i++) {
-  //   var row$ = $('<tr/>');
-  //   for (var colIndex = 0; colIndex < columns.length; colIndex++) {
-  //     var cellValue = myList[i][columns[colIndex]];
-  //     if (cellValue == null) cellValue = "";
-  //     row$.append($('<td/>').html(cellValue));
-  //   }
-  //   $(selector).append(row$);
-  // }
 }
 
 // Adds a header row to the table and returns the set of columns.

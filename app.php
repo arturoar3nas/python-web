@@ -60,7 +60,7 @@ if($_SESSION["k_username"] != $_SESSION["k_admin"])
 						<label for="ID">ID</label>
 						<input type="number" min="0" max="999" class="form-control" id="ID" name ="ID" required <?php echo $disabled; ?> >
 					</div>	
-					<div class="col">			
+					<div class="col">
 					</div>	  
 		        </div>
 		        <div class="row">
@@ -73,7 +73,9 @@ if($_SESSION["k_username"] != $_SESSION["k_admin"])
 		            <input type="text" class="form-control" name="server" id="server" required <?php echo $disabled; ?> >
 		          </div>	          	
 		          <div class="col">
-					</div>	
+		          	<label for="Pnumber">Estado del Proceso</label>
+					<input type="text" class="form-control" id="Pnumber" name ="Pnumber" readonly  >	
+				  </div>	
 					<div class="col">	
 					</div>	  
 		        </div> 
