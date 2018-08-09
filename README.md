@@ -36,11 +36,28 @@ When you will install apache the default web page is just an HTML file on the fi
 
 Then you will need remove index.html file 
 ```sh
-$ rm /var/www/html/index.html
+$ sudo rm /var/www/html/index.html
 ```
 Download from this Repository https://github.com/arturoar3nas/python-web
 the python-web-master.zip file and copy this in the path /var/www/html/ using
 FileZilla.
+
+go to 
+```sh
+cd /var/www/html
+```
+and execute 
+```sh
+sudo git clone https://github.com/arturoar3nas/python-web
+```
+then 
+```sh
+sudo mv python-web/* .
+```
+dont forget the point at last
+
+or you can do
+
 Then you will need uncompress the .zip file 
 ```sh
 $ unzip python-web-master.zip
@@ -71,25 +88,28 @@ You also need to do the following things
 
 I use apache2 as an example:
 ```sh
-$ cp /lib/systemd/system/apache2.service /etc/systemd/system/
+$ sudo cp /lib/systemd/system/apache2.service /etc/systemd/system/
 ```
 Now we edit the PrivateTmp=true to PrivateTmp=false:
 ```sh
-$ grep PrivateTmp /etc/systemd/system/apache2.service
+$ sudo grep PrivateTmp /etc/systemd/system/apache2.service
 PrivateTmp=true
 ```
 ```sh
-$ nano /etc/systemd/system/apache2.service
+$ sudo nano /etc/systemd/system/apache2.service
 ```
+and change true for false
+
 ```sh
-$ grep PrivateTmp /etc/systemd/system/apache2.service
+$ sudo grep PrivateTmp /etc/systemd/system/apache2.service
 PrivateTmp=false
 ```
 And at the end, restart the apache2 process:
 ```sh
-$ systemctl restart apache2.service
+$ sudo systemctl restart apache2.service
 ```
-and 
+and you will need too
+
 ```sh
 sudo visudo
 ```
