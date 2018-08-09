@@ -38,10 +38,6 @@ Then you will need remove index.html file
 ```sh
 $ sudo rm /var/www/html/index.html
 ```
-Download from this Repository https://github.com/arturoar3nas/python-web
-the python-web-master.zip file and copy this in the path /var/www/html/ using
-FileZilla.
-
 go to 
 ```sh
 cd /var/www/html
@@ -57,6 +53,10 @@ sudo mv python-web/* .
 dont forget the point at last
 
 or you can do
+
+Download from this Repository https://github.com/arturoar3nas/python-web
+the python-web-master.zip file and copy this in the path /var/www/html/ using
+FileZilla.
 
 Then you will need uncompress the .zip file 
 ```sh
