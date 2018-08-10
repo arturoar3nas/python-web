@@ -40,45 +40,45 @@ if($_SESSION["k_username"] != $_SESSION["k_admin"])
 			<h4><a>Estatus del Sistema</a></h4>
 			<div class="row">
 	          <div class="col">
-	            <label for="apn">Memoria Activa (Byte) </label>
+	            <label for="apn">Memoria Activa </label>
 	            <input type="text" class="form-control" name="ActiveMemory" id="ActiveMemory" readonly />
 	          </div>  
 	          <div class="col">
-	            <label for="apn_user">Memoria dispobible (Byte) </label>
+	            <label for="apn_user">Memoria dispobible </label>
 	            <input type="text" class="form-control" name="AvailableMemory" id="AvailableMemory"  readonly />
 	          </div>  
 	          <div class="col">
-	            <label for="apn_password">Buffer de Memoria (Byte) </label>
+	            <label for="apn_password">Buffer de Memoria </label>
 	            <input type="text" class="form-control" name="BufferMemory" id="BufferMemory"  readonly />
 	          </div> 
 	        </div>
 
 	        <div class="row">
 	          <div class="col">
-	            <label for="apn">Memoria Cache (Byte) </label>
+	            <label for="apn">Memoria Cache </label>
 	            <input type="text" class="form-control" name="CachedMemory" id="CachedMemory"  readonly />
 	          </div>  
 	          <div class="col">
-	            <label for="apn_user">Memoria Libre (Byte) </label>
+	            <label for="apn_user">Memoria Libre </label>
 	            <input type="text" class="form-control" name="FreeMemory" id="FreeMemory" readonly />
 	          </div>  
 	          <div class="col">
-	            <label for="apn_password">Memoria Inactiva (Byte) </label>
+	            <label for="apn_password">Memoria Inactiva </label>
 	            <input type="text" class="form-control" name="InactiveMemory" id="InactiveMemory" readonly />
 	          </div> 
 	        </div>
 
 	        <div class="row">
 	          <div class="col">
-	            <label for="apn">Memoria Total (Byte) </label>
+	            <label for="apn">Memoria Total </label>
 	            <input type="text" class="form-control" name="TotalMemory" id="TotalMemory" readonly />
 	          </div>  
 	          <div class="col">
-	            <label for="apn_user">Almacenamiento Libre (Byte) </label>
+	            <label for="apn_user">Almacenamiento Libre </label>
 	            <input type="text" class="form-control" name="diskfree" id="diskfree" readonly />
 	          </div>  
 	          <div class="col">
-	            <label for="apn_password">Almacenamiento Usado (Byte) </label>
+	            <label for="apn_password">Almacenamiento Usado </label>
 	            <input type="text" class="form-control" name="diskused" id="diskused" readonly />
 	          </div> 
 	        </div>
@@ -87,11 +87,11 @@ if($_SESSION["k_username"] != $_SESSION["k_admin"])
 	          <div class="col">
 	          </div>  
 	          <div class="col">
-	            <label for="apn_user">Almacenamiento Total (Byte) </label>
+	            <label for="apn_user">Almacenamiento Total </label>
 	            <input type="text" class="form-control" name="disktotal" id="disktotal" readonly />
 	          </div>  
 	          <div class="col">
-	            <label for="apn_password">% de uso de Cpu (Byte) </label>
+	            <label for="apn_password">% de uso de Cpu </label>
 	            <input type="text" class="form-control" name="CpuPercent" id="CpuPercent" readonly />
 	          </div> 
 	        </div>
