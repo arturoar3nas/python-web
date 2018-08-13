@@ -61,6 +61,46 @@ function guardarForm()
        });  
 }
 
+function saveConfig(){
+		// para cambiar el mensaje de validacion
+	$.validator.messages.required = "*Este dato es obligatorio!";
+	
+	$("#app-form").validate({
+	   submitHandler: submitFormCalibration
+       });
+}
+
+function submitFormCalibration(){
+	var datosFormulario = $("#app-form").serialize(); 
+	 $.ajax({ url: 'app_m_configurar.php',
+		 //data: {call: 'guardarDatos', datos: datosFormulario},
+		 data: datosFormulario,
+		 type: 'POST',
+		 beforeSend: function()
+			{	
+				$("#error").fadeOut();
+				$("#btn-configurar").html('<span class="glyphicon glyphicon-transfer"></span> &nbsp; Guardando ...');
+			},		
+		 success: 
+				function(response) 
+				{
+					if(response.trim()=="ok")
+					{						
+						setTimeout(' window.location.href = "app.php"; ',1000);
+					}
+					else
+					{
+						$("#btn-configurar").html('<span class="glyphicon glyphicon-cog"></span> &nbsp; Configurar');									
+						$("#error").fadeIn(1000, 
+						function()
+						{						
+							$("#error").html('<div class="alert alert-danger"> <span class="glyphicon glyphicon-info-sign"></span> &nbsp; '+response+' !</div>');							
+						});
+					}
+				}
+	});
+}
+
 function submitForm()
 {
 	 var datosFormulario = $("#app-form").serialize(); 
@@ -78,7 +118,7 @@ function submitForm()
 				{
 					if(response.trim()=="ok")
 					{						
-						setTimeout(' window.location.href = "index.php"; ',1000);
+						setTimeout(' window.location.href = "app.php"; ',1000);
 					}
 					else
 					{

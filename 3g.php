@@ -43,14 +43,13 @@ if($_SESSION["k_username"] != $_SESSION["k_admin"])
 	          <label for="isp" >ISP</label>
 	          <br/>
 	          <select onchange="selectISP(this.value,1)" name="isp" id="isp" class="btn dropdown-toggle selectpicker btn-default">
-	            <option value="0">ENEL Movistar</option>
-	            <option value="1">Entel</option>
-	            <option value="2">Movistar WAP</option>
-	            <option value="3">Movistar WEB</option>
-	            <option value="4">Claro</option>
-	            <option value="5">WOM</option>
-	            <option value="6">VTR</option>
-	            <option value="7">OTRO...</option>
+	            <option value="0">Entel</option>
+	            <option value="1">Movistar WAP</option>
+	            <option value="2">Movistar WEB</option>
+	            <option value="3">Claro</option>
+	            <option value="4">WOM</option>
+	            <option value="5">VTR</option>
+	            <option value="6">OTRO...</option>
 	          </select>
 	        </div>
 	        

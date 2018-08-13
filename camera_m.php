@@ -39,7 +39,7 @@ try
 	  if(is_file($file))
 	    unlink($file); // delete file
 	}
-
+	$thereisimg = false;
 	foreach($images as $img) 	{ 
 		if($img === '.' || $img === '..') {continue;} 		
 
@@ -48,9 +48,15 @@ try
 				 copy($img_dir.$img, 'tmp/'.$img); // dar permiso en tmp y en img y en /var/www/html/tmp 
 				 //array_push($html,'<img src="'.$img_dir.$img.'" >'); //'<img src="img/'.$img.'" >'
 				 array_push($html,'<img width="450" height="450" src="tmp/'.$img.'" >');
+				 $thereisimg = true;
 				 break; 
 			} else { continue; }	
 	}
+
+	if ($thereisimg == false){
+		array_push($html,'<img width="450" height="450" src="img/photo.png" >');
+	}
+
 	echo json_encode($html);	
 } catch(Exception $e) {
 	die(json_encode($e->getMessage()));

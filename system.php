@@ -75,11 +75,11 @@ if($_SESSION["k_username"] != $_SESSION["k_admin"])
 	          </div>  
 	          <div class="col">
 	            <label for="apn_user">Almacenamiento Libre </label>
-	            <input type="text" class="form-control" name="diskfree" id="diskfree" readonly />
+	            <input type="text" class="form-control" name="Diskfree" id="Diskfree" readonly />
 	          </div>  
 	          <div class="col">
 	            <label for="apn_password">Almacenamiento Usado </label>
-	            <input type="text" class="form-control" name="diskused" id="diskused" readonly />
+	            <input type="text" class="form-control" name="Diskused" id="Diskused" readonly />
 	          </div> 
 	        </div>
 
@@ -88,7 +88,7 @@ if($_SESSION["k_username"] != $_SESSION["k_admin"])
 	          </div>  
 	          <div class="col">
 	            <label for="apn_user">Almacenamiento Total </label>
-	            <input type="text" class="form-control" name="disktotal" id="disktotal" readonly />
+	            <input type="text" class="form-control" name="Disktotal" id="Disktotal" readonly />
 	          </div>  
 	          <div class="col">
 	            <label for="apn_password">% de uso de Cpu </label>

@@ -105,36 +105,31 @@ function selectISP(valor,apn)
 {
 		switch (valor){
 		case "0":
-			$("#apn").attr("value", "chilectratm00.movistar.cl");
-			$("#apn_user").attr("value", "enel");
-			$("#apn_password").attr("value", "enel");
-			break;
-		case "1":
 			$("#apn").attr("value", "imovil.entelpcs.cl");
 			$("#apn_user").attr("value", "entelpcs");
 			$("#apn_password").attr("value", "entelpcs");
 			break;
-		case "2":
+		case "1":
 			$("#apn").attr("value", "wap.tmovil.cl");
 			$("#apn_user").attr("value", "wap");
 			$("#apn_password").attr("value", "wap");
 			break;
-		case "3":
+		case "2":
 			$("#apn").attr("value", "web.tmovil.cl");
 			$("#apn_user").attr("value", "web");
 			$("#apn_password").attr("value", "web");
 			break;
-		case "4":
+		case "3":
 			$("#apn").attr("value", "bam.clarochile.cl");
 			$("#apn_user").attr("value", "clarochile");
 			$("#apn_password").attr("value", "clarochile");
 			break;
-		case "5":
+		case "4":
 			$("#apn").attr("value", "internet");
 			$("#apn_user").attr("value", "");
 			$("#apn_password").attr("value", "");
 			break;
-		case "6":
+		case "5":
 			$("#apn").attr("value", "movil.vtr.com");
 			$("#apn_user").attr("value", "vtrmovil");
 			$("#apn_password").attr("value", "vtrmovil");
@@ -145,7 +140,7 @@ function selectISP(valor,apn)
 			$("#apn_password").attr("value", "");
 			break;
 		}		
-		if (valor != 7 ) {
+		if (valor != 6 ) {
 			$("#apn").attr('readonly','true'); 
 			$("#apn_user").attr('readonly','true'); 
 			$("#apn_password").attr('readonly','true'); 

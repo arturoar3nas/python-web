@@ -27,16 +27,16 @@ You will need the follows tools:
 
 First Download and install the below stuff:
 ```sh
-$ sudo apt-get update
-$ sudo apt-get install apache2 -y
-$ sudo apt-get install php libapache2-mod-php -y
-$ sudo chmod 777 /home/pi/servicecom/config.json
+sudo apt-get update
+sudo apt-get install apache2 -y
+sudo apt-get install php libapache2-mod-php -y
+sudo chmod 777 /home/pi/servicecom/config.json
 ```
 When you will install apache the default web page is just an HTML file on the filesystem. It is located at  /var/www/html/index.html.
 
 Then you will need remove index.html file 
 ```sh
-$ sudo rm /var/www/html/index.html
+sudo rm /var/www/html/index.html
 ```
 go to 
 ```sh
@@ -60,12 +60,12 @@ FileZilla.
 
 Then you will need uncompress the .zip file 
 ```sh
-$ unzip python-web-master.zip
+unzip python-web-master.zip
 ```
 At this point you can acces to the web page through the navigator to the local host direction.
 How i know the local host direction? Easy, just type:
 ```sh
-$ hostname -I
+hostname -I
 ```
 Then you will look the login page and insert for admin:
 User: Admin
@@ -88,25 +88,25 @@ You also need to do the following things
 
 I use apache2 as an example:
 ```sh
-$ sudo cp /lib/systemd/system/apache2.service /etc/systemd/system/
+sudo cp /lib/systemd/system/apache2.service /etc/systemd/system/
 ```
 Now we edit the PrivateTmp=true to PrivateTmp=false:
 ```sh
-$ sudo grep PrivateTmp /etc/systemd/system/apache2.service
+sudo grep PrivateTmp /etc/systemd/system/apache2.service
 PrivateTmp=true
 ```
 ```sh
-$ sudo nano /etc/systemd/system/apache2.service
+sudo nano /etc/systemd/system/apache2.service
 ```
 and change true for false
 
 ```sh
-$ sudo grep PrivateTmp /etc/systemd/system/apache2.service
+sudo grep PrivateTmp /etc/systemd/system/apache2.service
 PrivateTmp=false
 ```
 And at the end, restart the apache2 process:
 ```sh
-$ sudo systemctl restart apache2.service
+sudo systemctl restart apache2.service
 ```
 and you will need too
 

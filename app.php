@@ -76,9 +76,13 @@ if($_SESSION["k_username"] != $_SESSION["k_admin"])
 		          	<label for="Pnumber">Estado del Proceso</label>
 					<input type="text" class="form-control" id="Pnumber" name ="Pnumber" readonly  >	
 				  </div>	
-					<div class="col">	
-					</div>	  
+				  <div class="col">	
+				  </div>	  
 		        </div> 
+		        <br><br>	
+			    <button class="btn btn-success" name="btn-configurar" id="btn-configurar" onclick="guardarForm();">
+					<span class="glyphicon glyphicon-cog"></span> &nbsp; Configurar 
+				</button>
 				<hr>
 				<h4><a>Detener Medici&oacuten de Peso</a></h4>
 				<label for="fWeight"></label>
@@ -87,6 +91,39 @@ if($_SESSION["k_username"] != $_SESSION["k_admin"])
 				  <input type="checkbox" value="1" name="fWeight" id="fWeight" required <?php echo $disabled; ?>>
 				  <span class="slider round"></span>
 				</label>
+				<hr>
+				<h4><a>Configuracion celda de Carga</a></h4>
+					<!-- 				{
+					  "Cmd": 0,
+					  "WeightCalibration": 0
+					}
+								 -->	
+				<div class="row">
+		          <div class="col">
+		            <label for="Cmd">Comando</label>
+				    <select name="Cmd" id="Cmd" class="btn dropdown-toggle selectpicker btn-default">
+				        <option value="0">Sin Accion (0)</option>
+				        <option value="1">Configurar Tara (1)</option>
+				        <option value="2">Calibrar con Valor (2)</option>
+				        <option value="3">Obtener Imagen (3)</option>
+				    </select>
+				   </div> 
+		          <div class="col">
+		            <label for="Key">Calibracion (Kg)</label>
+		            <input type="number" min="0" max="1000" step="1" class="form-control" id="WeightCalibration" name ="WeightCalibration">
+		          </div>	          	
+		          <div class="col">
+					</div>	
+					<div class="col">		
+					</div>	  
+		        </div>
+		        <br>
+		        <button class="btn btn-primary" name="btn-configurar" id="btn-configurar" onclick="saveConfig();">
+				<span class="glyphicon glyphicon-cog"></span> &nbsp; Configurar 
+				</button>
+
+				<hr>
+				<h4><a>Celda de Carga</a></h4>
 		        <div class="row">
 		          <div class="col">
 		            <label for="tara">Tara (Kg)</label>
@@ -108,10 +145,6 @@ if($_SESSION["k_username"] != $_SESSION["k_admin"])
 	     		<br><br>
 			<br><br>
 			<div class="form-group">
-            <button class="btn btn-success" name="btn-configurar" id="btn-configurar" onclick="guardarForm();">
-				<span class="glyphicon glyphicon-cog"></span> &nbsp; Configurar 
-			</button>
-
 			<?php
     			require_once("footer.php");
     			require_once("scroll.php");

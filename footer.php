@@ -2,7 +2,7 @@
 <footer class="sticky-footer">
   <div class="container">        
     <div class="text-center">
-      <img style="width: 30px; align: right" alt="Logo Innovared" src="img/raspberry-pi.png">
+      <img style="width: 80px; align: right"  src="img/logo.png">
       <small>Wolke - Copyright © - Versi&oacute;n 1.0.0.5 </small>
     </div>
   </div>

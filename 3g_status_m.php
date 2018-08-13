@@ -6,15 +6,6 @@ function cargarDatos()
 {	try 
 	{
 		
-		// {
-		//   "Red": "entel",
-		//   "Signal": "-113",
-		//   "Type": "3G",
-		//   "Status":"OK",
-		//   "Roaming":"Disabled",
-		//   "IMEI": "123456789"
-		// }
-
 		//include "php/gprs-config.php";
 		$myFile = "/home/pi/servicecom/simstatus.json";
 	    $arr_data = array(); // create empty array
@@ -33,7 +24,7 @@ function cargarDatos()
 		$array['type'] = $arr_data['Type'];
 		$array['status'] = $arr_data['Status'];
 		$array['roaming'] = $arr_data['Roaming'];
-		$array['imei'] = $arr_data['IMEI'];	
+		$array['imei'] = $arr_data['Imei'];	
 
 		// se transforma el arreglo de respuesta en un json
 		echo json_encode($array);

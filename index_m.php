@@ -46,24 +46,24 @@ function cargarDatos()
 
 
 		$array['fWifi']=  $arr_data['Flags']['Wifi'];
-		$array['f3G'] = $arr_data['Flags']['3G'];
+		$array['f3G'] = $arr_data['Flags']['3g'];
 		$array['fBt'] =$arr_data['Flags']['Bluethoot'];
 
-		$array['apn'] = $arr_data['3G']['APN'];
+		$array['apn'] = $arr_data['3G']['Apn'];
 		$array['apn_user'] = $arr_data['3G']['User'];
 		$array['apn_password'] = $arr_data['3G']['Psw'];
 
-		$array['wifi_ssid'] = $arr_data['Wifi']['SSID'];
+		$array['wifi_ssid'] = $arr_data['Wifi']['Ssid'];
 		$array['wifi_password'] = $arr_data['Wifi']['Psw'];
 
 		$array['Aplicacion'] = $arr_data['Aplication'];
 		$array['Scan_Time'] = $arr_data['ScanTime'];
 		$array['fScan'] = $arr_data['StopScan'];
-		$array['ID'] = $arr_data['ID'];
-		$array['Key'] = $arr_data['KEY'];
-		$array['version'] = $arr_data['version'];
-		$array['server'] = $arr_data['server'];
-		$array['fWeight'] = $arr_data['weight'];
+		$array['ID'] = $arr_data['Id'];
+		$array['Key'] = $arr_data['Key'];
+		$array['version'] = $arr_data['Version'];
+		$array['server'] = $arr_data['Server'];
+		$array['fWeight'] = $arr_data['Weight'];
 		$array['Pnumber'] = $arr_data['StatusApp'];	
 
 		// se transforma el arreglo de respuesta en un json

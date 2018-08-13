@@ -1,6 +1,6 @@
   <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <img style="width: 40px; height: 50px;" alt="Logo Net-Energy" src="img/raspberry-pi.png">
+    <img style="width: 100px; height: 50px;" alt="Logo Net-Energy" src="img/logo.png">
     <!--<a class="navbar-brand" href="index.html">Start InnoRTU</a>-->
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>

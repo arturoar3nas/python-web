@@ -35,14 +35,14 @@ function guardarDatos()
 		   if(strcmp (arr_data['Flags']['Wifi'],$_POST['fWifi']) != 0 && $_POST['fWifi'] != null)
 		   $arr_data['Flags']['Wifi'] = $_POST['fWifi'];
 		   
-		   if(strcmp ($arr_data['Flags']['3G'],$_POST['f3G']) != 0 && $_POST['f3G'] != null)
-		   $arr_data['Flags']['3G'] = $_POST['f3G'];
+		   if(strcmp ($arr_data['Flags']['3g'],$_POST['f3G']) != 0 && $_POST['f3G'] != null)
+		   $arr_data['Flags']['3g'] = $_POST['f3G'];
 
 		   if(strcmp ($arr_data['Flags']['Bluethoot'], $_POST['fBt']) != 0 && $_POST['fBt'] != null)
 		   $arr_data['Flags']['Bluethoot'] = $_POST['fBt'];
 
-		   if(strcmp ($arr_data['3G']['APN'],$_POST['apn']) != 0 && $_POST['apn'] != null)
-		   $arr_data['3G']['APN'] = $_POST['apn'];
+		   if(strcmp ($arr_data['3G']['Apn'],$_POST['apn']) != 0 && $_POST['apn'] != null)
+		   $arr_data['3G']['Apn'] = $_POST['apn'];
 
 		   if(strcmp ($arr_data['3G']['User'],$_POST['apn_user']) != 0 && $_POST['apn_user'] != null)
 		   $arr_data['3G']['User'] = $_POST['apn_user'];
@@ -50,8 +50,8 @@ function guardarDatos()
 		   if(strcmp ($arr_data['3G']['Psw'] ,$_POST['apn_password']) != 0 && $_POST['apn_password'] != null)
 		   $arr_data['3G']['Psw'] = $_POST['apn_password'];
 
-		   if(strcmp ($arr_data['Wifi']['SSID'],$_POST['wifi_ssid']) != 0 && $_POST['wifi_ssid'] != null)
-		   $arr_data['Wifi']['SSID'] = $_POST['wifi_ssid'];
+		   if(strcmp ($arr_data['Wifi']['Ssid'],$_POST['wifi_ssid']) != 0 && $_POST['wifi_ssid'] != null)
+		   $arr_data['Wifi']['Ssid'] = $_POST['wifi_ssid'];
 
 		   if(strcmp ($arr_data['Wifi']['Psw'] ,$_POST['wifi_password']) != 0 && $_POST['wifi_password'] != null)
 		   $arr_data['Wifi']['Psw'] = $_POST['wifi_password'];
@@ -65,20 +65,20 @@ function guardarDatos()
 		   if(strcmp ($arr_data['StopScan'],$_POST['fScan']) != 0 && $_POST['fScan'] != null)
 		   $arr_data['StopScan'] = $_POST['fScan'];
 		   
-           if(strcmp ($arr_data['ID'],$_POST['ID']) != 0 && $_POST['ID'] != null)
-		   $arr_data['ID'] = $_POST['ID'];
+           if(strcmp ($arr_data['Id'],$_POST['ID']) != 0 && $_POST['ID'] != null)
+		   $arr_data['Id'] = $_POST['ID'];
 
-		   if(strcmp ($arr_data['KEY'],$_POST['Key']) != 0 && $_POST['Key'] != null)
-		   $arr_data['KEY'] = $_POST['Key'];
+		   if(strcmp ($arr_data['Key'],$_POST['Key']) != 0 && $_POST['Key'] != null)
+		   $arr_data['Key'] = $_POST['Key'];
 
-		   if(strcmp ( $arr_data['version'] ,$_POST['version']) != 0 && $_POST['version'] != null)
-		   $arr_data['version'] = $_POST['version'];
+		   if(strcmp ( $arr_data['Version'] ,$_POST['version']) != 0 && $_POST['version'] != null)
+		   $arr_data['Version'] = $_POST['version'];
 
-		   if(strcmp ($arr_data['server'] , $_POST['server']) != 0 && $_POST['server'] != null)
-		   $arr_data['server'] = $_POST['server'];
+		   if(strcmp ($arr_data['Server'] , $_POST['server']) != 0 && $_POST['server'] != null)
+		   $arr_data['Server'] = $_POST['server'];
 
-		   if(strcmp ($arr_data['weight'] ,$_POST['fWeight']) != 0 && $_POST['fWeight'] != null)
-		   $arr_data['weight'] = $_POST['fWeight'];	
+		   if(strcmp ($arr_data['Weight'] ,$_POST['fWeight']) != 0 && $_POST['fWeight'] != null)
+		   $arr_data['Weight'] = $_POST['fWeight'];	
 
 	       //Convert updated array to JSON
 		   $json = json_encode($arr_data,JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);

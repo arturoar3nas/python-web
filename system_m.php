@@ -51,9 +51,9 @@ function cargarDatos()
                 $arr_data["FreeMemory"] = convertToReadableSize($arr_data['FreeMemory']);
                 $arr_data["InactiveMemory"] = convertToReadableSize($arr_data['InactiveMemory']);
                 $arr_data["TotalMemory"] = convertToReadableSize($arr_data['TotalMemory']);
-                $arr_data['diskfree'] = convertToReadableSize($arr_data['diskfree']);
-                $arr_data['diskused'] = convertToReadableSize($arr_data['diskused']);
-                $arr_data['disktotal'] = convertToReadableSize($arr_data['disktotal']);
+                $arr_data['Diskfree'] = convertToReadableSize($arr_data['Diskfree']);
+                $arr_data['Diskused'] = convertToReadableSize($arr_data['Diskused']);
+                $arr_data['Disktotal'] = convertToReadableSize($arr_data['Disktotal']);
                 $arr_data['CpuPercent'] = convertToReadableSize($arr_data['CpuPercent']);
 
                 // echo json_encode($arr_data,JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);

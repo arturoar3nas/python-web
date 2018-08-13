@@ -44,11 +44,19 @@ function cargarDatos()
 	   	// converts json data into array
 	   	$arr_data = json_decode($jsondata, true);
 
-		$array['tara'] = $arr_data['tara'];
+		$array['tara'] = $arr_data['Tara'];
 		$array['Gain'] = $arr_data['Gain'];
-		$array['weight'] = $arr_data['weight'];
-		$array['Calibration_Status'] = $arr_data['Calibration_Status'];	
+		$array['weight'] = $arr_data['Weight'];
+		$array['Calibration_Status'] = $arr_data['CalibrationStatus'];
 
+
+		$arr_data_2 = array();
+		$my_file_2 = "/home/pi/servicecom/loadcellcmd.json";	
+		$json_data_2 = file_get_contents($my_file_2);
+		$arr_data_2 = json_decode($json_data_2, true);
+		$array['Cmd'] = $arr_data_2['Cmd'];
+		$array['WeightCalibration'] = $arr_data_2['WeightCalibration'];
+ 
 		// se transforma el arreglo de respuesta en un json
 		echo json_encode($array);
 	}
