@@ -87,8 +87,8 @@ if($_SESSION["k_username"] != $_SESSION["k_admin"])
 				<h4><a>Detener Medici&oacuten de Peso</a></h4>
 				<label for="fWeight"></label>
 				<label class="switch">
-				  <input type="hidden" name="fWeight" value="0" id="fWeight" required <?php echo $disabled; ?>>
-				  <input type="checkbox" value="1" name="fWeight" id="fWeight" required <?php echo $disabled; ?>>
+				  <input type="hidden" name="fWeight" value="0" id="fWeight" >
+				  <input type="checkbox" value="1" name="fWeight" id="fWeight">
 				  <span class="slider round"></span>
 				</label>
 				<hr>

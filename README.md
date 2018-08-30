@@ -117,3 +117,10 @@ And copy in the last line
 ```sh
 www-data ALL=NOPASSWD: ALL
 ```
+
+And too give permissions
+
+```sh
+chown -R www-data:www-data /tmp
+chown -R www-data:www-data /var/www/html/tmp
+```

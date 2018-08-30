@@ -1,5 +1,6 @@
 <?php
-
+ini_set('display_errors', 'On');
+error_reporting(E_ALL);
 /*
 Archivo: index_m.php
 Descripcion: Se carga la configuracion del equipo desde la pagina index.php
@@ -32,6 +33,7 @@ try
 	$img_dir = "/tmp/";
 
 	$images = scandir($img_dir);
+	//print_r($images);
 	$html = array();
 
 	$files = glob('tmp/*'); // get all file names
@@ -43,11 +45,11 @@ try
 	foreach($images as $img) 	{ 
 		if($img === '.' || $img === '..') {continue;} 		
 
-			if (  (preg_match('/.jpg/',$img))  ||  (preg_match('/.gif/',$img)) || (preg_match('/.tiff/',$img)) || (preg_match('/.png/',$img)) ) {				
+			if (  (preg_match('/.jpg/',$img))  ||  (preg_match('/.gif/',$img)) || (preg_match('/.tiff/',$img)) || (preg_match('/.png/',$img)) || (preg_match('/.jpeg/',$img)) ) {				
 
-				 copy($img_dir.$img, 'tmp/'.$img); // dar permiso en tmp y en img y en /var/www/html/tmp 
-				 //array_push($html,'<img src="'.$img_dir.$img.'" >'); //'<img src="img/'.$img.'" >'
-				 array_push($html,'<img width="450" height="450" src="tmp/'.$img.'" >');
+				 copy($img_dir.$img, '/var/www/html/tmp/'.$img); // dar permiso en tmp y en img y en /var/www/html/tmp 
+				 //array_push($html,'<img src="'.$img_dir.$img.'" >'); //'<img width="450" height="450" src="img/'.$img.'" >'
+				 array_push($html,'<img src="tmp/'.$img.'" >');
 				 $thereisimg = true;
 				 break; 
 			} else { continue; }	
